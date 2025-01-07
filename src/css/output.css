@@ -1338,6 +1338,30 @@ video {
     height: 100%;
   }
 
+  .md\:w-\[70em\] {
+    width: 70em;
+  }
+
+  .md\:w-\[45em\] {
+    width: 45em;
+  }
+
+  .md\:w-\[23em\] {
+    width: 23em;
+  }
+
+  .md\:w-\[25em\] {
+    width: 25em;
+  }
+
+  .md\:w-\[30em\] {
+    width: 30em;
+  }
+
+  .md\:w-\[100\%\] {
+    width: 100%;
+  }
+
   .md\:max-w-\[25em\] {
     max-width: 25em;
   }
