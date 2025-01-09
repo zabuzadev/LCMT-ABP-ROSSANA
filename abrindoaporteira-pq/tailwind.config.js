@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "../src/**/*.{html,js}",
+    "../abrindoaporteira-obg/**/*.{html,js}",
     "*.{html,js}"
   ],
   theme: {
