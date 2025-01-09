@@ -78,10 +78,18 @@
 }
 
 .hero2{
-  background-image: url('../images/fundonovo.webp');
-  background-size: cover;
-  background-position: left;
+  background-image: url('../images/fundonovo2.webp');
+  background-color: #012718;
+  background-size: auto;
+  background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 500px) {
+  .hero2{
+    background-size: cover;
+    background-position: left;
+  }
 }
 
 #eps{
