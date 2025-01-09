@@ -77,6 +77,13 @@
   background-repeat: no-repeat;
 }
 
+.hero2{
+  background-image: url('../images/fundonovo.webp');
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
 #eps{
   background-image: url('../images/bg-middle-shadowpx.webp');
   background-size: cover;
