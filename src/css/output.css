@@ -967,11 +967,6 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
-.bg-green-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity, 1));
-}
-
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
@@ -1502,6 +1497,10 @@ video {
     width: 36em;
   }
 
+  .lg\:w-\[30em\] {
+    width: 30em;
+  }
+
   .lg\:max-w-\[30em\] {
     max-width: 30em;
   }
@@ -1510,5 +1509,9 @@ video {
 @media (min-width: 1280px) {
   .xl\:w-\[45em\] {
     width: 45em;
+  }
+
+  .xl\:w-\[35em\] {
+    width: 35em;
   }
 }
