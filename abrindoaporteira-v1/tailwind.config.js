@@ -3,6 +3,9 @@ module.exports = {
   content: [
     "../src/**/*.{html,js}",
     "../abrindoaporteira-obg/**/*.{html,js}",
+    "../abrindoaporteira-v1/**/*.{html,js}",
+    "../abrindoaporteira-v2/**/*.{html,js}",
+    "../abrindoaporteira-org/**/*.{html,js}",
     "*.{html,js}"
   ],
   theme: {
