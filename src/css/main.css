@@ -27,12 +27,11 @@
   font-style: normal;
 }
 
-
-
 *{
   scroll-behavior: smooth;
   scrollbar-width: thin !important;
   scrollbar-color: white #012718 !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar {
