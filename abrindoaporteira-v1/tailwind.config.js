@@ -6,6 +6,7 @@ module.exports = {
     "../abrindoaporteira-v1/**/*.{html,js}",
     "../abrindoaporteira-v2/**/*.{html,js}",
     "../abrindoaporteira-org/**/*.{html,js}",
+    "!../**/node_modules",
     "*.{html,js}"
   ],
   theme: {
@@ -17,7 +18,7 @@ module.exports = {
 
       },
       fontFamily: {
-        'roboto': ['Roboto',  'system-ui', 'sans-serif', '-apple-system', 'Arial',],
+        'roboto': ['Roboto',  'system-ui', 'sans-serif'],
     },
   },
   },
