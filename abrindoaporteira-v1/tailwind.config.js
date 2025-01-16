@@ -17,7 +17,7 @@ module.exports = {
 
       },
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
+        'roboto': ['Roboto',  'system-ui', 'sans-serif', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Open Sans', 'Helvetica Neue', 'Arial',],
     },
   },
   },
