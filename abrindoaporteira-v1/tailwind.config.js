@@ -6,6 +6,7 @@ module.exports = {
     "../abrindoaporteira-v1/**/*.{html,js}",
     "../abrindoaporteira-v2/**/*.{html,js}",
     "../abrindoaporteira-org/**/*.{html,js}",
+    "../abrindoaporteira-v3/**/*.{html,js}",
     "!../**/node_modules",
     "*.{html,js}"
   ],
