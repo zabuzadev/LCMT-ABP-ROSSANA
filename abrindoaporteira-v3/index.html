@@ -150,64 +150,7 @@
         </div>
     </footer>
     <!--Script do input de telefone-->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.2.1/build/css/intlTelInput.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.2.1/build/js/intlTelInput.min.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.2.1/build/js/intlTelInputWithUtils.min.js"></script>
-    <script>
-        var input = document.querySelector("#phone");
-        var iti = window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function (callback) {
-                fetch('https://ipinfo.io/json')
-                    .then(response => response.json())
-                    .then(data => callback(data.country))
-                    .catch(() => callback('us'));
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.2.1/build/js/intlTelInputWithUtils.min.js",
-            formatOnDisplay: true,
-            nationalMode: false,
-            autoHideDialCode: true,
-            separateDialCode: true,
-        });
-
-        // Adicionar verificação de validade ao sair do campo
-        input.addEventListener('blur', function () {
-            if (iti.isValidNumber()) {
-                // Número válido
-                input.classList.remove('invalid');
-            } else {
-                alert('Por favor, digite um número de telefone válido.');
-                input.classList.add('invalid');
-            }
-        });
-
-        // Prevenir entradas inválidas
-        input.addEventListener('keydown', function (e) {
-            const allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'];
-            if (allowedKeys.includes(e.key)) {
-                return;
-            }
-            if (!/\d/.test(e.key)) {
-                e.preventDefault();
-            }
-        });
-
-        // Limitar o número de dígitos conforme o país selecionado
-        input.addEventListener('input', function () {
-            var countryData = iti.getSelectedCountryData();
-            var maxLength = countryData.nationalNumberMaxLength || 15;
-            var dialCodeLength = countryData.dialCode.length;
-
-            // Calcular o número máximo de caracteres permitidos
-            var maxChars = dialCodeLength + maxLength + 1; // +1 para o espaço ou símbolo adicional
-
-            if (input.value.length > maxChars) {
-                input.value = input.value.slice(0, maxChars);
-            }
-        });
-    </script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('form_1');
@@ -265,35 +208,6 @@
                         console.error('Erro ao disparar o webhook:', error);
                     });
             });
-
-            //Máscara de telefone ao digitar
-            const phoneInput = document.getElementById('phone');
-            phoneInput.addEventListener('input', function (e) {
-                let value = e.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-                value = value.substring(0, 11); // Limita a entrada a 11 dígitos numéricos
-
-                if (value.length > 0) {
-                    value = '(' + value; // Adiciona o parênteses no início
-                }
-                if (value.length > 2) {
-                    value = value.slice(0, 3) + ') ' + value.slice(3); // Fecha o parênteses nos dois primeiros dígitos
-                }
-                if (value.length > 8) {
-                    value = value.slice(0, 10) + '-' + value.slice(10); // Adiciona o hífen após o quinto dígito do número
-                }
-
-                e.target.value = value;
-            });
-
-            //Manipula o apagamento sem travar
-            phoneInput.addEventListener('keydown', function (e) {
-                const key = e.key;
-                if (key === 'Backspace' || key === 'Delete') {
-                    let value = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-                    e.target.value = value; // Reaplica sem máscara para permitir apagar livremente
-                }
-            });
-
 
         });
 
